@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Marketing y Gestión de Campañas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📅 Calendario de Marketing</h1>
+        <p>Planificador y Gestor de Contenidos Digitales</p>
+    </header>
+
+    <main class="app-container">
+        <section class="form-section">
+            <h2>➕ Programar Nueva Campaña</h2>
+            <form id="campaignForm">
+                <div class="input-group">
+                    <label for="campaignTitle">Título de la Campaña:</label>
+                    <input type="text" id="campaignTitle" placeholder="Ej. Lanzamiento Cascos Invierno" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="campaignDate">Fecha de Publicación:</label>
+                    <input type="date" id="campaignDate" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="campaignPlatform">Plataforma:</label>
+                    <select id="campaignPlatform" required>
+                        <option value="" disabled selected>Selecciona una plataforma</option>
+                        <option value="TikTok">TikTok</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="YouTube">YouTube</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="campaignType">Tipo de Contenido:</label>
+                    <select id="campaignType" required>
+                        <option value="" disabled selected>Selecciona el formato</option>
+                        <option value="Reel/Video Corto">Reel / Video Corto</option>
+                        <option value="Imagen/Carrusel">Imagen / Carrusel</option>
+                        <option value="Historia/Story">Historia / Story</option>
+                        <option value="En vivo/Live">En vivo / Live</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="campaignDesc">Descripción / Copy:</label>
+                    <textarea id="campaignDesc" rows="3" placeholder="Escribe el enfoque o los puntos clave del contenido..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Guardar Campaña</button>
+            </form>
+        </section>
+
+        <section class="calendar-section">
+            <h2>📋 Campañas Programadas</h2>
+            <div class="filters">
+                <input type="text" id="searchInput" placeholder="Buscar campaña por título..." onkeyup="filtrarCampanas()">
+            </div>
+            
+            <div id="campaignList" class="campaign-grid">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Gestión de Marketing Digital</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
